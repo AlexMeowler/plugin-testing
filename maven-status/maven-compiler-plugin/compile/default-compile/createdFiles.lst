@@ -1,0 +1,9 @@
+org\retal\plugin\test\annotation\InjectMojo.class
+org\retal\plugin\test\annotation\processor\MojoInjector.class
+org\retal\plugin\test\annotation\processor\ParameterProcessor.class
+org\retal\plugin\test\annotation\processor\MojoInjector$1.class
+org\retal\plugin\test\exception\ExceptionUtil.class
+org\retal\plugin\test\annotation\processor\MojoInjector$ClassEnum.class
+org\retal\plugin\test\exception\FieldNotDeclaredException.class
+org\retal\plugin\test\exception\RequiredValueNotDeclaredException.class
+org\retal\plugin\test\logging\AsyncOutputRedirector.class

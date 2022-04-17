@@ -1,0 +1,7 @@
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\annotation\InjectMojo.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\logging\AsyncOutputRedirector.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\exception\ExceptionUtil.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\annotation\processor\MojoInjector.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\exception\RequiredValueNotDeclaredException.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\annotation\processor\ParameterProcessor.java
+D:\eclipse-workspace\plugin-testing\src\main\java\org\retal\plugin\test\exception\FieldNotDeclaredException.java
