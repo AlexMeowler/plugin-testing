@@ -29,7 +29,6 @@ public class ParameterProcessor extends AbstractProcessor {
     public static final String REQUIRED_VALUES_ELEMENT_NAME = "requiredValues";
 
     //TODO refactoring??
-    //TODO separate project for testing plugins???
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
@@ -49,7 +48,7 @@ public class ParameterProcessor extends AbstractProcessor {
                         .collect(Collectors.toList());
                 try {
                     String fileName = String.format(FILE_NAME_PATTERN, element.getSimpleName().toString());
-                    FileObject fileObject = processingEnv.getFiler().createResource(StandardLocation.SOURCE_OUTPUT, "", fileName);
+                    FileObject fileObject = processingEnv.getFiler().createResource(StandardLocation.CLASS_OUTPUT, "", fileName);
                     PrintWriter writer = new PrintWriter(fileObject.openWriter());
                     writer.println(String.format("<%s>", ROOT_ELEMENT_NAME));
                     writer.println(String.format("\t<%s>", DEFAULT_VALUES_ELEMENT_NAME));

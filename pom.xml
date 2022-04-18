@@ -6,7 +6,7 @@
 
     <groupId>org.retal</groupId>
     <artifactId>plugin-testing</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <url>https://github.com/AlexMeowler/plugin-testing</url>
 
@@ -23,6 +23,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <local.repository.folder>mvn-artifact</local.repository.folder>
     </properties>
 
     <dependencies>
@@ -88,7 +89,7 @@
                 <version>2.8.2</version>
                 <configuration>
                     <altDeploymentRepository>
-                        internal.repo::default::file://${project.build.directory}/mvn-artifact
+                        internal.repo::default::file://${project.build.directory}/${local.repository.folder}
                     </altDeploymentRepository>
                 </configuration>
             </plugin>
@@ -99,7 +100,9 @@
                 <configuration>
                     <message>Maven artifacts for ${project.version}</message>
                     <noJekyll>true</noJekyll>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <outputDirectory>${project.build.directory}/${local.repository.folder}</outputDirectory>
+                    <branch>refs/heads/artifacts</branch>
+                    <force>true</force>
                     <includes>
                         <include>**/*</include>
                     </includes>
